@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <style>
+      input[type="text"],
+      input[type="email"],
+      input[type="number"] {
+        width: 200px;
+        border-radius: 5px;
+        height: 20px;
+        outline: none;
+        border: solid 1px blue;
+      }
+
+      form {
+        margin: auto;
+        width: 50%;
+        border: solid 1px silver;
+        background-color: whitesmoke;
+        padding: 15px;
+      }
+      #title,
+      #description {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">Welcome to Our Survey Form</h1>
+    <p id="description">Complete This Form</p>
+
+    <form action="" id="survey-form">
+      <label id="name-label">Enter Your Name:</label><br />
+      <input
+        type="text"
+        required
+        id="name"
+        name="user_name"
+        placeholder="Enter name here"
+      />
+      <br /><br />
+      <label id="email-label" for="">Enter Your Email:</label><br />
+      <input
+        type="email"
+        required
+        id="email"
+        name="Email"
+        placeholder="Enter Your Email"
+      />
+      <br /><br />
+      <label id="number-label" for="">Enter Your Age:</label><br />
+      <input
+        type="number"
+        required
+        id="number"
+        name="number"
+        placeholder="number"
+        min="0"
+        max="100"
+      />
+      <br /><br />
+      <label for="dropdown">Work Experience:</label><br />
+      <select id="dropdown">
+        <option value="first">0-5</option>
+        <option value="second">5-10</option>
+        <option value="third">10-15</option>
+        <option value="fourth">More Than 15</option>
+      </select>
+      <br /><br />
+      <label for="Gender">Gender</label><br />
+      <p>
+        <input type="radio" name="gender" value="male" checked /> Male<br />
+
+        <input type="radio" name="gender" value="female" />female><br />
+      </p>
+      <br /><br />
+      <label for="Gender">Check Those You Choose</label><br />
+      <input type="checkbox" name="Favourite Foods" value="Sushi" />Sushi<br />
+      <input type="checkbox" name="Favourite Foods" value="Rice" />Rice<br />
+      <input
+        type="checkbox"
+        name="Favourite Foods"
+        value="Spaghetti"
+      />Spaghetti<br />
+      <input type="checkbox" name="Favourite Foods" value="Chips" />Chips<br />
+      <br />
+      <label for="message">Please Write Something here: </label><br />
+      <textarea
+        name="Comments"
+        rows="6"
+        cols="70"
+        placeholder="Enter Text:"
+      ></textarea>
+      <input type="submit" id="submit" value="Click here to submit form " />
+    </form>
+  </body>
+</html>
